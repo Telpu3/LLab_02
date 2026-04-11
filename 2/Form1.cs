@@ -129,12 +129,12 @@ namespace _2
             if (sum == currentPerfectNumber)
             {
                 labelSumCheck.Text = $"Число {currentPerfectNumber} — Совершенное! Сумма делителей = {sum}";
-            
+
             }
             else
             {
                 labelSumCheck.Text = $"Число {currentPerfectNumber} — Не совершенное. Сумма делителей = {sum}";
-                
+
             }
 
             if (divisors.Count == 0)
@@ -147,7 +147,7 @@ namespace _2
             // Запускаем перерисовку PictureBox
             pictureBox.Invalidate();
         }
-     
+
         private void pictureBox_Paint(object sender, PaintEventArgs e)
         {
             if (divisors.Count == 0) return;
@@ -180,6 +180,16 @@ namespace _2
 
                 x += width;  // Сдвигаем на ширину прямоугольника (без дополнительного отступа)
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelPerfectInfo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

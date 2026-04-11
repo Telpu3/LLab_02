@@ -75,7 +75,7 @@
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(883, 520);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "Задача1";
+            tabPage1.Text = "Проверка";
             // 
             // labelResult1
             // 
@@ -119,6 +119,7 @@
             label1.Size = new Size(110, 20);
             label1.TabIndex = 0;
             label1.Text = "Введите число";
+            label1.Click += label1_Click;
             // 
             // tabPage2
             // 
@@ -132,7 +133,7 @@
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(883, 520);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "Задача2";
+            tabPage2.Text = "Диапазон";
             // 
             // listBoxPerfect
             // 
@@ -187,7 +188,7 @@
             tabPage3.Padding = new Padding(3);
             tabPage3.Size = new Size(883, 520);
             tabPage3.TabIndex = 2;
-            tabPage3.Text = "Задача3";
+            tabPage3.Text = "Рисунок";
             // 
             // labelSumCheck
             // 
@@ -236,6 +237,7 @@
             labelPerfectInfo.Size = new Size(213, 20);
             labelPerfectInfo.TabIndex = 0;
             labelPerfectInfo.Text = "Введите совершенное число:";
+            labelPerfectInfo.Click += labelPerfectInfo_Click;
             // 
             // Form1
             // 
