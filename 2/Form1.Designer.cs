@@ -82,18 +82,18 @@
             labelResult1.AutoSize = true;
             labelResult1.Location = new Point(365, 278);
             labelResult1.Name = "labelResult1";
-            labelResult1.Size = new Size(161, 20);
+            labelResult1.Size = new Size(0, 20);
             labelResult1.TabIndex = 3;
-            labelResult1.Text = "Здесь будет результат";
             labelResult1.Click += labelresult1_Click;
             // 
             // button1
             // 
             button1.BackColor = Color.DeepSkyBlue;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(386, 210);
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            button1.Location = new Point(386, 201);
             button1.Name = "button1";
-            button1.Size = new Size(125, 29);
+            button1.Size = new Size(145, 40);
             button1.TabIndex = 2;
             button1.Text = "Проверить";
             button1.UseVisualStyleBackColor = false;
@@ -105,18 +105,18 @@
             textBoxN1.BorderStyle = BorderStyle.FixedSingle;
             textBoxN1.Location = new Point(386, 139);
             textBoxN1.Name = "textBoxN1";
-            textBoxN1.Size = new Size(125, 27);
+            textBoxN1.Size = new Size(145, 27);
             textBoxN1.TabIndex = 1;
-            textBoxN1.Text = "5";
             textBoxN1.TextAlign = HorizontalAlignment.Center;
             textBoxN1.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             label1.Location = new Point(386, 72);
             label1.Name = "label1";
-            label1.Size = new Size(110, 20);
+            label1.Size = new Size(145, 28);
             label1.TabIndex = 0;
             label1.Text = "Введите число";
             label1.Click += label1_Click;
@@ -138,19 +138,21 @@
             // listBoxPerfect
             // 
             listBoxPerfect.BackColor = Color.YellowGreen;
+            listBoxPerfect.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
             listBoxPerfect.FormattingEnabled = true;
             listBoxPerfect.Location = new Point(23, 220);
             listBoxPerfect.Name = "listBoxPerfect";
-            listBoxPerfect.Size = new Size(857, 284);
+            listBoxPerfect.Size = new Size(857, 283);
             listBoxPerfect.TabIndex = 3;
             // 
             // buttonGenerate
             // 
             buttonGenerate.BackColor = Color.Violet;
             buttonGenerate.FlatStyle = FlatStyle.Popup;
-            buttonGenerate.Location = new Point(318, 157);
+            buttonGenerate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            buttonGenerate.Location = new Point(261, 155);
             buttonGenerate.Name = "buttonGenerate";
-            buttonGenerate.Size = new Size(260, 29);
+            buttonGenerate.Size = new Size(357, 39);
             buttonGenerate.TabIndex = 2;
             buttonGenerate.Text = "Найти совершенные числа";
             buttonGenerate.UseVisualStyleBackColor = false;
@@ -168,9 +170,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(116, 88);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            label2.Location = new Point(34, 87);
             label2.Name = "label2";
-            label2.Size = new Size(213, 20);
+            label2.Size = new Size(306, 28);
             label2.TabIndex = 0;
             label2.Text = "Введите верхнюю границу N:";
             label2.Click += label2_Click;
@@ -189,15 +192,15 @@
             tabPage3.Size = new Size(883, 520);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Рисунок";
+            tabPage3.Click += tabPage3_Click;
             // 
             // labelSumCheck
             // 
             labelSumCheck.AutoSize = true;
             labelSumCheck.Location = new Point(295, 144);
             labelSumCheck.Name = "labelSumCheck";
-            labelSumCheck.Size = new Size(50, 20);
+            labelSumCheck.Size = new Size(0, 20);
             labelSumCheck.TabIndex = 4;
-            labelSumCheck.Text = "label4";
             labelSumCheck.Click += label4_Click;
             // 
             // pictureBox
@@ -214,7 +217,7 @@
             // 
             buttonVisualize.BackColor = Color.Wheat;
             buttonVisualize.FlatStyle = FlatStyle.Flat;
-            buttonVisualize.Location = new Point(465, 50);
+            buttonVisualize.Location = new Point(579, 45);
             buttonVisualize.Name = "buttonVisualize";
             buttonVisualize.Size = new Size(200, 29);
             buttonVisualize.TabIndex = 2;
@@ -224,7 +227,7 @@
             // 
             // textBoxPerfect
             // 
-            textBoxPerfect.Location = new Point(295, 47);
+            textBoxPerfect.Location = new Point(354, 45);
             textBoxPerfect.Name = "textBoxPerfect";
             textBoxPerfect.Size = new Size(125, 27);
             textBoxPerfect.TabIndex = 1;
@@ -232,9 +235,10 @@
             // labelPerfectInfo
             // 
             labelPerfectInfo.AutoSize = true;
-            labelPerfectInfo.Location = new Point(56, 50);
+            labelPerfectInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            labelPerfectInfo.Location = new Point(19, 42);
             labelPerfectInfo.Name = "labelPerfectInfo";
-            labelPerfectInfo.Size = new Size(213, 20);
+            labelPerfectInfo.Size = new Size(301, 28);
             labelPerfectInfo.TabIndex = 0;
             labelPerfectInfo.Text = "Введите совершенное число:";
             labelPerfectInfo.Click += labelPerfectInfo_Click;

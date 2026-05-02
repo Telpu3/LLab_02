@@ -28,12 +28,12 @@ namespace _2
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            if (!int.TryParse(textBoxN1.Text, out int n) || n <= 0)
+            if (!int.TryParse(textBoxN1.Text, out int n) || n <= 0 || n > 10000)
             {
-                MessageBox.Show("Введено неправильное число");
+                MessageBox.Show("Введите число от 1 до 10000");
                 return;
             }
+            
             int sum = 0;
             for (int i = 1; i <= n / 2; i++)
             {
@@ -60,10 +60,9 @@ namespace _2
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
-            // Валидация
-            if (!int.TryParse(textBoxN2.Text, out int n) || n < 2)
+            if (!int.TryParse(textBoxN2.Text, out int n) || n < 2 || n > 10000)
             {
-                MessageBox.Show("Введите целое число >= 2.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Введите целое число от 2 до 10000.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -107,13 +106,13 @@ namespace _2
 
         private void buttonVisualize_Click(object sender, EventArgs e)
         {
-            if (!int.TryParse(textBoxPerfect.Text, out currentPerfectNumber) || currentPerfectNumber <= 0)
+            if (!int.TryParse(textBoxPerfect.Text, out currentPerfectNumber) || currentPerfectNumber <= 0 || currentPerfectNumber > 10000)
             {
-                MessageBox.Show("Введите положительное целое число!", "Ошибка",
+                MessageBox.Show("Введите положительное целое число от 1 до 10000!", "Ошибка",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+  
             divisors.Clear();
 
             int sum = 0;
@@ -176,8 +175,12 @@ namespace _2
 
                 g.FillRectangle(Brushes.Gold, x, y, width, height);
                 g.DrawRectangle(Pens.Black, x, y, width, height);
-                g.DrawString(divisors[i].ToString(), new Font("Arial", 10), Brushes.DarkRed, x + 30, y + 30);
-
+                // Центрируем текст внутри прямоугольника
+                string text = divisors[i].ToString();
+                SizeF textSize = g.MeasureString(text, new Font("Arial", 10));
+                float textX = x + (width - textSize.Width) / 2;
+                float textY = y + (height - textSize.Height) / 2;
+                g.DrawString(text, new Font("Arial", 10), Brushes.DarkRed, textX, textY);
                 x += width;  // Сдвигаем на ширину прямоугольника (без дополнительного отступа)
             }
         }
@@ -188,6 +191,11 @@ namespace _2
         }
 
         private void labelPerfectInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
         {
 
         }
